@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <window title="Login" border="normal" width="400px" height="300px">
+        <vbox>
+            <label value="Username:"/>
+            <textbox id="username" placeholder="Enter username"/>
+
+            <label value="Password:"/>
+            <passwordbox id="password" placeholder="Enter password"/>
+
+            <hbox>
+                <button label="Login" id="loginBtn" />
+                <button label="Register" id="registerBtn" />
+            </hbox>
+        </vbox>
+    </window>
+</zk>

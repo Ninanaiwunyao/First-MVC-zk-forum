@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk-spring xmlns="http://www.zkoss.org/2005/zk"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.zkoss.org/2005/zk
+                        http://www.zkoss.org/2005/zk/spring.xsd">
+
+    <zk-page-creator>
+        <base-view-engine class="org.zkoss.spring.springmvc.SpringMVCEngine"/>
+    </zk-page-creator>
+
+</zk-spring>
