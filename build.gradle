@@ -1,19 +1,48 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.7.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+}
+
 repositories {
     mavenCentral()
+    maven { url 'https://mavensync.zkoss.org/maven2' }
 }
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    // ZK Framework
+    implementation files('libs/zk.jar')
+
+    // Spring JDBC
+    implementation 'org.springframework:spring-jdbc:5.3.23'
+
+    // PostgreSQL Driver
+    implementation 'org.postgresql:postgresql:42.5.1'
+
+    // CKEditor
+    implementation files('libs/ckez-4.4.6.3.jar')
+
+    // Log Framework
+    implementation 'org.slf4j:slf4j-api:2.0.5'
+    runtimeOnly 'org.slf4j:slf4j-simple:2.0.5'
+
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.6'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
 test {
     useJUnitPlatform()
+}
+bootRun {
+    mainClass = 'com.example.Application'
 }
